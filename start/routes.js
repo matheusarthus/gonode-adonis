@@ -16,6 +16,8 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+Route.resource('uploads', 'FileS3Controller')
+
 Route.post('users', 'UserController.store').validator('User')
 Route.post('sessions', 'SessionController.store').validator('Session')
 
